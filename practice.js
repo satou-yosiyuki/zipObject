@@ -1,10 +1,12 @@
-function zippedObject(props=[],values=[]){
-const zippedObject={}
-for(let i=0; i<props.length i++){
-    
+function without(array,...values){
+const newArray=[];
+for(let i=0; i<array.length; i++){
+    const caondidateToPush=array[i];
+    if (!values.includes(caondidateToPush)){
+        newArray.push(caondidateToPush);
+    }
 }
-return zippedObject;
+return newArray;
 }
 
-
-console.log(zipObject(['a','b'],[1,2]));
+console.log(without([2,1,2,3],1,2));
