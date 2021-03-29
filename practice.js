@@ -1,12 +1,13 @@
-function without(array,...values){
-const newArray=[];
+function uniq(array){
+const uniqArray=[];
 for(let i=0; i<array.length; i++){
-    const caondidateToPush=array[i];
-    if (!values.includes(caondidateToPush)){
-        newArray.push(caondidateToPush);
+    const value=array[i];
+    if(!uniqArray.includes(value)){
+      uniqArray.push(value);  
     }
 }
-return newArray;
+return uniqArray;
 }
 
-console.log(without([2,1,2,3],1,2));
+const numbers=[2,1,2];
+console.log( uniq(numbers));
