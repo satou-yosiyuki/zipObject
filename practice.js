@@ -1,14 +1,13 @@
-function slice(array,start=0, end=array.length){
-  const slicedArray=[];
-for(let i=start; i<end; i++){
-    slicedArray.push(array[i]);
+function nth(array,n=0){
+if(n>=0){
+  return array[n];
+}else{
+    return array[array.length+n];
+}
 }
 
-  return slicedArray;
-}
-const Numbers=[10,20,30,40,50];
-const slicedNumbers=slice(Numbers,1,4);
+const array=['a','b','c','d'];
 
-console.log(slicedNumbers);
+console.log( nth(array,1));
 
-console.log(Numbers);
+console.log(nth(array,-2));
