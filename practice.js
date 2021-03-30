@@ -1,15 +1,9 @@
-function take(array, n=1){
-  if(n===0){
-    return [];
-  }
-  if(n>array.length){
-    return [...array];
-  }
-  const takenValues=[];
-  for(let i=0; i<n; i++){
-takenValues.push(array[i]);
-  }
-  return takenValues;
+function tail (array){
+const newArray=[];
+for(let i=1; i<array.length; i++){
+    newArray.push(array[i]);
+}
+return newArray;
 }
 
-console.log(take([1,2,3],5));
+console.log(tail([1,2,3]) );
