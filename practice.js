@@ -1,13 +1,5 @@
-function nth(array,n=0){
-if(n>=0){
-  return array[n];
-}else{
-    return array[array.length+n];
-}
+function last(array){
+ return array[array.length-1];
 }
 
-const array=['a','b','c','d'];
-
-console.log( nth(array,1));
-
-console.log(nth(array,-2));
+console.log(last([1,2,3]));
