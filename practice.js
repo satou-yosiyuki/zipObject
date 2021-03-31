@@ -1,5 +1,8 @@
-function last(array){
- return array[array.length-1];
-}
+function initial(array){
+const copiedArray=[...array];
+copiedArray.pop();
 
-console.log(last([1,2,3]));
+return copiedArray;
+}
+const numbers=[1,2,3];
+console.log(initial(numbers));
